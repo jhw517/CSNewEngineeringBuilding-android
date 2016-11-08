@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_floor" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.manuelpeinado.imagelayout.ImageLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#aaa"
+        custom:fit="auto"
+        custom:image="@drawable/fifth_floor"
+        custom:imageHeight="1744"
+        custom:imageWidth="1150">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="69dp"
+            android:text="318/150"
+            custom:layout_centerX="318"
+            custom:layout_centerY="150"
+            custom:layout_maxWidth="440" />
+
+        <Button
+            android:id="@+id/manhattan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="608/595"
+            custom:layout_centerX="608"
+            custom:layout_centerY="595" />
+
+        <Button
+            android:id="@+id/queens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="906/764"
+            custom:layout_centerX="906"
+            custom:layout_centerY="764" />
+
+        <Button
+            android:id="@+id/bronx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="923/231"
+            custom:layout_centerX="923"
+            custom:layout_centerY="231" />
+
+        <Button
+            android:id="@+id/brooklyn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="660/1143"
+            custom:layout_centerX="660"
+            custom:layout_centerY="1143" />
+
+        <Button
+            android:id="@+id/statenIsland"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="205/1280"
+            custom:layout_centerX="205"
+            custom:layout_centerY="1280" />
+
+    </com.manuelpeinado.imagelayout.ImageLayout>
+</LinearLayout>
