@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <include layout="@layout/toolbar_floor" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:layout_scrollFlags="scroll">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F1BF1F"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="분실물 관리"
+                            android:textColor="#ffffff"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </android.support.design.widget.CollapsingToolbarLayout>
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F1BF1F"
+                    app:layout_scrollFlags="enterAlways">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:minHeight="80dp">
+
+                        <info.hoang8f.android.segmented.SegmentedGroup
+                            android:id="@+id/mypage_segmented_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:orientation="horizontal"
+                            app:sc_border_width="1dp"
+                            app:sc_corner_radius="5dp"
+                            app:sc_tint_color="#F29320">
+
+                            <RadioButton
+                                android:id="@+id/mypage_feed_button"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:text="분실물" />
+
+                            <RadioButton
+                                android:id="@+id/mypage_story_button"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="습득물" />
+
+                        </info.hoang8f.android.segmented.SegmentedGroup>
+
+                    </RelativeLayout>
+
+                </android.support.design.widget.CollapsingToolbarLayout>
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mypage_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                </android.support.v7.widget.RecyclerView>
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
